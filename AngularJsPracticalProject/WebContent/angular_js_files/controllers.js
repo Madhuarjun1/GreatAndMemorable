@@ -21,12 +21,6 @@ controller('SearchController', function($scope, $window, $http,$compile) {
 controller('groupController', function($scope, $window, $modal, $http, shopService) {
 	
 	var vm = this;
-	
-	  vm.people = "";
-	//$scope.group.status=true;
-	  
-	  
-	 
 	  
 	$scope.open = function(group) {
 		vm.peopleInstance=group;
