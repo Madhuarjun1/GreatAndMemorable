@@ -36,7 +36,7 @@ controller('groupController', function($scope, $window, $modal, $http, restServi
 		
 		var responseCatalog = restService.getDetails();
 		responseCatalog.success(function (response) {
-			alert("Coming from Server:"+JSON.stringify(response));
+			alert("Coming from Server:"+response);
 		});
 		
 		
@@ -114,7 +114,7 @@ controller('reportController', function($scope, $window , $http, reportService){
 	
 }).
 
-controller('shopController', function($scope, $window , $http, shopService){
+controller('shopController', function($scope, $window , $http){
 	
 	$scope.getUsers = function(){
 		var responseCatalog = shopService.getDetails();
