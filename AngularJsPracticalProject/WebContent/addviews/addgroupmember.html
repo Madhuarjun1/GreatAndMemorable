@@ -1,7 +1,16 @@
 
 <div modal="showModal" close="cancel()">
   <div class="modal-header">
-      <h4>Add/Update of Group:  {{ group.groupCode }}</h4>
+      <h4>Please confirm the details before adding :   {{modalProject.proNumber}}
+		{{modalProject.proTitle}}
+		{{modalProject.proDonorName}}
+		{{modalProject.proDonorAddress}}
+		{{modalProject.proPurpose}}
+		{{modalProject.proDate}}
+		{{modalProject.currQty}}
+		{{modalProject.currType}}
+		{{modalProject.currValue}}
+		{{modalProject.resultAmount}}</h4>
   </div>
   <div class="modal-body">
       <table>

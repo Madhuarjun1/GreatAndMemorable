@@ -18,30 +18,49 @@ controller('SearchController', function($scope, $window, $http,$compile) {
 	
 }).
 
+controller('userController', function($scope, $window, $http) {
+	
+	
+}).
+
 controller('groupController', function($scope, $window, $modal, $http, shopService) {
 	
 	var vm = this;
-	  
-	$scope.open = function(group) {
-		vm.peopleInstance=group;
+	$scope.items = [
+	                { id: 1, name: 'Foo' },
+	                { id: 2, name: 'Bar' }
+	            ];
+	$scope.open = function(project) {
+		
+		alert("Add project data:"+JSON.stringify(project));
+		/*project.proNumber
+		project.proTitle
+		project.proDonorName
+		project.proDonorAddress
+		project.proPurpose
+		project.proDate
+		project.currQty
+		project.currType
+		project.currValue
+		project.resultAmount*/
+		
+		vm.peopleInstance=project;
 		
 		
 	   var modalInstance =  $modal.open({
 		   
 	      templateUrl: 'addviews/addgroupmember.html',
 	      controller: [
-                       '$scope','$modalInstance','people', function($scope, $modalInstance,people){
+                       '$scope','$modalInstance','project', function($scope, $modalInstance,project){
                     	   
-                    	   alert("Modal data:"+JSON.stringify(people));
+                    	   alert("Modal data:"+JSON.stringify(project));
                     	   
                     	   
                     	   
-                    	  $scope.group=people;
-                    	  alert("added to scope:"+group.groupCode);
+                    	  $scope.modalProject=project;
+                    	  alert("added to scope:"+JSON.stringify($scope.modalProject));
                     	   $scope.ok = function () {
-                    		   group.status=true;
-                    		   
-                    		   $modalInstance.close(group);
+                    		   $modalInstance.close();
                            };
                            
                            $scope.cancel = function(){
@@ -51,7 +70,7 @@ controller('groupController', function($scope, $window, $modal, $http, shopServi
                    ],
                   
                    resolve: {
-                	   people: function () { alert(JSON.stringify(vm.peopleInstance)); return vm.peopleInstance; }
+                	   project: function () { alert(JSON.stringify(vm.peopleInstance)); return vm.peopleInstance; }
                        
                      },
 	      windowClass: 'modal fade in',

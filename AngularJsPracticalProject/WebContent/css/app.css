@@ -1,12 +1,7 @@
         
- body {
-    padding-top: 50px;
-    overflow: hidden;
+.* {
     font-size: 11px;
 	font-family: arial;
-	line-height: 0.5cm;
-	font-style: normal;
-	color: #333333;
 }
 
 .header {
@@ -77,48 +72,9 @@
 	}
 }
 
-a, input {
+/* a, input {
 	outline: none;
-}
-
-input {
-	height: 20px;
-	font-size: 9px;
-	padding: 1px 1px 1px 3px;
-	font-family: verdana;
-	border: 1px solid #cad9eb;
-	outline: none;
-}
-
-.poc-textfield {
-	font-family: verdana;
-	font-size: 9px;
-	font-weight: normal;
-	color: #000000;
-	background-color: #00000;
-	border: 1px solid #cad9eb;
-	padding: 1px 1px 1px 3px;
-	width:140px;
-}
-
-.poc-textarea {
-	font-family: verdana;
-	font-size: 9px;
-	font-weight: normal;
-	border: 1px solid #cad9eb;
-	padding: 1px 1px 1px 3px;
-	width:200px;
-}
-
-.textalignr {
-	text-align: right;
-	padding-right: 5px;
-}
-
-.textalignl {
-	text-align: left;
-	padding-right: 0px;
-}
+} */
 
 .mainContent {
  	float: left;
@@ -149,81 +105,11 @@ input {
   padding-left: 4px;
   font-weight: 300;
 }
-.mainContent > .content-header > .breadcrumb {
-  float: right;
-  background-color: transparent;
-  margin-top: 0px;
-  margin-bottom: 0;
-  padding: 7px 5px;
-  position: absolute;
-  top: 15px;
-  right: 10px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  
-}
+
 
 #popUpDiv {
 	display: none;
 	padding: 0.5em;
 }
 
-.popupTable th.dragme {
-	text-align: center;
-	font-size: 11px;
-	background: url("../images/tableHeader.gif") repeat-x;
-	color: black;
-	font-size: 10px;
-	height: 20px;
-	cursor: hand;
-	white-space: nowrap;
-	z-index: 99999;
-}
-
-.popDivButton {
-	height: 20px;
-	font-size: 10px;
-	color: white;
-	border: 1px solid #dfeffc;
-	background-image:url("../images/appHeader.jpg");
-}
-
-
-.popupWin {
-	height: 16px;
-	width: 16px;
-	vertical-align: top;
-	font-size: 10px;
-	border: 2px solid #cad9eb;
-	background: none;
-	border: none;
-	background-image: url("../images/icon-popup.gif");
-	background-repeat: no-repeat;
-	cursor: pointer;
-}
-
-.toolbar-save-button {
-  background: url("../images/save_accept.png") no-repeat;
-  padding-left: 15px;
-  padding-bottom: 15px;
-}
-
-.toolbar-delete-button {
-  background: url("../images/cross.png") no-repeat;
-  padding-left: 15px;
-  padding-bottom: 15px;
-}
-.toolbar-cancel-button {
-  background: url("../images/cancel-icon.png") no-repeat;
-  padding-left: 15px;
-  padding-bottom: 15px;
-}
-
-.divider-vertical {
-height: 40px;
-margin: 0 9px;
-border-left: 1px solid #f2f2f2;
-border-right: 1px solid #ffffff;
-}
 

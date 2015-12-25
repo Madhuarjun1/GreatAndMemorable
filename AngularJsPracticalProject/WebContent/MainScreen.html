@@ -13,106 +13,109 @@
 <!-- Bootstrap core CSS -->
 <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-custom.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="lib/jquery/jquery-ui.css">
+<link href="lib/bootstrap/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="lib/jquery/jquery-ui.css"> -->
 <link rel="stylesheet" type="text/css" href="css/app.css">
-<link rel="stylesheet" type="text/css" href="css/tablestyle.css">
-<link rel="stylesheet" type="text/css" href="css/buttonstyle.css">
 <link rel="stylesheet" type="text/css" href="css/accordionmenu.css">
+<style>
+#accordion-resizer {
+	padding: 10px;
+	width: 215px;
+	height: 370px;
+}
+</style>
 
-
-
-<!-- Angular JS & App Scripts -->
-<script src="lib/angular-1.4.3/angular.js"></script>
-<script src="lib/angular-1.4.3/ui-bootstrap-tpls-0.13.3.js"></script>
-<script src="lib/angular-1.4.3/angular-ui-router.js"></script>
-
-
-
-
-
-<!-- Jquery Scripts -->
-<script src="lib/jquery/jquery-1.10.js"></script>
-<script src="lib/jquery/jquery-ui.js"></script>
-<script src="lib/jquery/accordionmenu-min.js"></script>
-<script src="angular_js_files/utility.js"></script>
-
-<script src="angular_js_files/app.js"></script>
-<script src="angular_js_files/controllers.js"></script>
-<script src="angular_js_files/services.js"></script>
-<script src="angular_js_files/directives.js"></script>
-
-  <style>
-  	#accordion-resizer { padding: 10px;width: 215px; height: 370px; }
-  </style>
-  
 </head>
 
 <body ng-app="pocApp">
 	<div>
-		 <div class="navbar navbar-default navbar-fixed-top header">
-	       <div class="container">
-	    		<div class="navbar-header">
-	          		<a class="navbar-brand" href="#">Madhu Repository</a>
-	    		</div>
-	       </div>
-	    </div> 
-	    
-		<div id="wrapper">
-		        <div id="sidebar-wrapper" class="col-md-2">
-		            <div id="sidebar">
-						  <div id="acdnmenu">
-						    <ul>
-						        <li>Administration
-							        <ul>
-							          	<li class="selectedMenuOption"><a ui-sref="changepassword">Change Password</a></li> 
-							        </ul>
-							      </li>
-						        <li>Projects
-							        <ul>
-										<li class="selectedMenuOption"><a ui-sref="creategroup">Add project</a></li>
-										<li class="selectedMenuOption"><a ui-sref="createuser">Search project</a></li>
-							        </ul>
-							      </li>
-							      
-							      <li>Addresses
-							      	<ul>
-						      			<li class="selectedMenuOption"><a ui-sref="shopreport">Add address</a></li> 
-						      			<li class="selectedMenuOption"><a ui-sref="searchpro">Search address</a></li>
-									</ul>
-							      </li>
-							      <li>Parishes
-							      	<ul>
-						      			<li class="selectedMenuOption"><a ui-sref="shopreport">Add parish</a></li> 
-						      			<li class="selectedMenuOption"><a ui-sref="searchpro">Search Parish</a></li>
-									</ul>
-							      </li>
-							      
-						    </ul>
-						</div>
-				    </div> 
-		        </div>
-		        <div id="main-wrapper"  class="col-md-10">
-		           	<div id="requestContent" class="mainContent">
-						
-						
-						<div ui-view id="responseContent">
-					
-						</div>
-						
-						<div id="popUpDiv">
-				
-						</div>
-						
-					</div>
-		        </div>
+		<div class="navbar navbar-default navbar-fixed-top header">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Madhu Repository</a>
+				</div>
+			</div>
 		</div>
-		
+
+		<div id="wrapper">
+			<div id="sidebar-wrapper" class="col-md-2">
+				<div id="sidebar">
+					<div id="acdnmenu">
+						<ul>
+							<li>Administration
+								<ul>
+									<li class="selectedMenuOption"><a ui-sref="changepassword">Change
+											Password</a></li>
+								</ul>
+							</li>
+							<li>Projects
+								<ul>
+									<li class="selectedMenuOption"><a ui-sref="addproject">Add
+											project</a></li>
+									<li class="selectedMenuOption"><a ui-sref="createuser">Search
+											project</a></li>
+								</ul>
+							</li>
+
+							<li>Addresses
+								<ul>
+									<li class="selectedMenuOption"><a ui-sref="shopreport">Add
+											address</a></li>
+									<li class="selectedMenuOption"><a ui-sref="searchpro">Search
+											address</a></li>
+								</ul>
+							</li>
+							<li>Parishes
+								<ul>
+									<li class="selectedMenuOption"><a ui-sref="shopreport">Add
+											parish</a></li>
+									<li class="selectedMenuOption"><a ui-sref="searchpro">Search
+											Parish</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="main-wrapper" class="col-md-10">
+				<div id="requestContent" class="mainContent">
+
+
+					<div ui-view id="responseContent"></div>
+
+					<div id="popUpDiv"></div>
+
+				</div>
+			</div>
+		</div>
+
 
 	</div>
 
+	<!-- Jquery Scripts -->
+	<script src="lib/jquery/jquery-1.10.js"></script>
+	<script src="lib/jquery/jquery-ui.js"></script>
+	<script src="lib/jquery/accordionmenu-min.js"></script>
+	
+	<!-- bootstrap scripts -->
+	
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+
+	<!-- Angular JS & App Scripts -->
+	<script src="lib/angular-1.4.3/angular.js"></script>
+	<script src="lib/angular-1.4.3/ui-bootstrap-tpls-0.13.3.js"></script>
+	<script src="lib/angular-1.4.3/angular-ui-router.js"></script>
+
+	<!-- application libraries -->
+
+	<script src="angular_js_files/app.js"></script>
+	<script src="angular_js_files/controllers.js"></script>
+	<script src="angular_js_files/services.js"></script>
+	<script src="angular_js_files/directives.js"></script>
+	<script src="angular_js_files/utility.js"></script>
 
 </body>
 
 </html>
 
-<!-- class="ui-state-disabled" To disable any UI element-->

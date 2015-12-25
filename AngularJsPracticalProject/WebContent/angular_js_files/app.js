@@ -12,20 +12,24 @@ var pocApp = angular.module('pocApp', ['ui.router', 'ui.bootstrap', 'pocApp.cont
             url:'/changepassword',
             templateUrl: 'partials/changepassword.html',
             controller: 'homeController'
+        }) .state('defaultscreen', {
+            url:'/',
+            templateUrl: 'partials/DefaultScreen.html',
+            controller:'DefaultScreenController'
         })
         .state('createuser', {
             url:'/createuser',
-            templateUrl: 'partials/user.html', 
-            controller: 'userController'
+            templateUrl: 'partials/SearchProject.html', 
+            controller: 'SearchController'
         }).state('searchpro', {
    		 url:'/searchpro',
          templateUrl: 'partials/SearchProject.html', 
          controller: 'SearchController'
 	})
         
-        .state('creategroup', {
-            url:'/creategroup',
-            templateUrl: 'partials/group.html', 
+        .state('addproject', {
+            url:'/addproject',
+            templateUrl: 'partials/addproject.html', 
             controller: 'groupController'
         })	.state('shopreport', {
     		 url:'/report',
