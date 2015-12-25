@@ -14,11 +14,11 @@ factory('reportService', function($http){
 	}; 
 	return reportService;
 }).
-factory('shopService',function($http){
+factory('restService',function($http){
 	
-	var shopService={};
-	shopService.getDetails=function(){
-		var theurl='rest/api/getusers';
+	var restService={};
+	restService.getDetails=function(){
+		var theurl='/api/owners/';
 		return $http({
 			method: 'GET', 
 		 		url: theurl

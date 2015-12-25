@@ -23,7 +23,7 @@ controller('userController', function($scope, $window, $http) {
 	
 }).
 
-controller('groupController', function($scope, $window, $modal, $http, shopService) {
+controller('groupController', function($scope, $window, $modal, $http, restService) {
 	
 	var vm = this;
 	$scope.items = [
@@ -31,6 +31,14 @@ controller('groupController', function($scope, $window, $modal, $http, shopServi
 	                { id: 2, name: 'Bar' }
 	            ];
 	$scope.open = function(project) {
+		
+		
+		
+		var responseCatalog = restService.getDetails();
+		responseCatalog.success(function (response) {
+			alert("Coming from Server:"+JSON.stringify(response));
+		});
+		
 		
 		alert("Add project data:"+JSON.stringify(project));
 		/*project.proNumber
