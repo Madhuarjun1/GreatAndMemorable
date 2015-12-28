@@ -24,19 +24,31 @@ controller('userController', function($scope, $window, $http) {
 }).
 
 controller('groupController', function($scope, $window, $modal, $http, restService) {
+	$scope.project={};
 	
 	var vm = this;
-	$scope.items = [
-	                { id: 1, name: 'Foo' },
-	                { id: 2, name: 'Bar' }
+	$scope.items = [{ id: 0, name: 'CurrencyType' },
+	                { id: 1, name: 'USD' },
+	                { id: 2, name: 'INR' }
 	            ];
+	var amount=2000;
+	$scope.project.currType = $scope.items[0];
+	$scope.project.resultAmount=amount;
+	alert("value of dropdown:"+$scope.items[0].id);
+	
 	$scope.open = function(project) {
 		
 		
 		
 		var responseCatalog = restService.getDetails();
 		responseCatalog.success(function (response) {
-			alert("Coming from Server:"+response);
+			$scope.servermessage=response;
+			alert("Coming from Server:"+$scope.servermessage);
+		});
+		responseCatalog.error(function (data,status) {
+			if(status == 400 || status == 403) {
+				alert('Error while processing!');
+			}
 		});
 		
 		
